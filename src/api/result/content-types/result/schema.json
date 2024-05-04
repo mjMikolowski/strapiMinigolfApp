@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "results",
+  "info": {
+    "singularName": "result",
+    "pluralName": "results",
+    "displayName": "Result",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "round": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::round.round"
+    },
+    "laneNumber": {
+      "type": "integer",
+      "required": true,
+      "max": 18,
+      "min": 1
+    }
+  }
+}

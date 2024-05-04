@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "lanes",
+  "info": {
+    "singularName": "lane",
+    "pluralName": "lanes",
+    "displayName": "Lane",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "number": {
+      "type": "integer",
+      "required": true,
+      "max": 18,
+      "min": 1,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "name": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "course": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::course.course"
+    }
+  }
+}

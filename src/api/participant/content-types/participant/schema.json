@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "participants",
+  "info": {
+    "singularName": "participant",
+    "pluralName": "participants",
+    "displayName": "Participant",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "tournament": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::tournament.tournament"
+    },
+    "player": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::player.player"
+    },
+    "isActive": {
+      "type": "boolean"
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "MAN",
+        "WOMAN",
+        "SENIOR_MAN",
+        "SENIOR_WOMAN",
+        "JUNIOR_MAN",
+        "JUNIOR_WOMAN"
+      ]
+    }
+  }
+}

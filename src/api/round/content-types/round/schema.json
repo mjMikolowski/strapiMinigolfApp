@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "rounds",
+  "info": {
+    "singularName": "round",
+    "pluralName": "rounds",
+    "displayName": "Round",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "roundNumber": {
+      "type": "integer",
+      "required": true
+    },
+    "tournament": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::tournament.tournament"
+    },
+    "participant": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::participant.participant"
+    }
+  }
+}
